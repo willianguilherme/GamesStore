@@ -2,6 +2,6 @@
 
 namespace GamesStore.API.Controllers;
 
-public class ControllerInitial : ControllerBase
+public abstract class ControllerInitial : ControllerBase
 {
 }
