@@ -1,4 +1,5 @@
 using Asp.Versioning;
+using GamesStore.API.Configurations;
 using GamesStore.Application;
 using GamesStore.Infrastructure;
 using GamesStore.Persistence;
@@ -29,6 +30,8 @@ builder.Services.AddApiVersioning(option =>
     options.GroupNameFormat = "'v'VVV";
     options.SubstituteApiVersionInUrl = true;
 });
+
+builder.Services.GetSystemConfiguration(builder.Configuration);
 
 var app = builder.Build();
 
