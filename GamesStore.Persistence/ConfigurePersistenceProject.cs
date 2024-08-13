@@ -9,7 +9,6 @@ public static class ConfigurePersistenceProject
 {
     public static IServiceCollection BuilderPersistenceServices(this IServiceCollection services, IConfiguration configuration)
     {
-        var teste = configuration.GetConnectionString("MainConnection");
         services.AddDbContext<GamesStoreDbContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("MainConnection")));
 
